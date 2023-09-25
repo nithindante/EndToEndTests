@@ -19,6 +19,7 @@ public class ErrorValidation extends BaseTest {
 	{ 
 	LoginPage.login("nithinrajkumarr@gmail.com", "Sreekuty1@");
 	Assert.assertEquals("Incorrect email or password.", LoginPage.getErrorMessage());
+	System.out.println("Success");
 	}   
 	
 
@@ -28,5 +29,6 @@ public class ErrorValidation extends BaseTest {
 		CartPage CartPage= ProductCataloguePage.selectItem("IPHONE 13 PRO");	
 		 Boolean match = CartPage.confirmProducts("iphone 13 pro");		
 		 Assert.assertTrue(match); 	 	  
+		 System.out.println("Success");
 } 
 } 
