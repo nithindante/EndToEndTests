@@ -39,6 +39,7 @@ public class SubmitOrder extends BaseTest{
 		 ConfirmationPage ConfirmationPage =  ShippingDetails.clickOnSubmit();
 		 String confirmationText= ConfirmationPage.getText();
 		Assert.assertEquals(confirmationText, "THANKYOU FOR THE ORDER.");
+		System.out.println("Success");
 	}
 	 
 	@Test(dependsOnMethods="endToEndTests" )
@@ -48,6 +49,7 @@ public class SubmitOrder extends BaseTest{
 		OrderHistoryPage OrderHistoryPage = ProductCataloguePage.clickOnOrders();
 		String itemName = OrderHistoryPage.getProductConfirmation("IPHONE 13 PRO");
 		Assert.assertEquals(itemName, "iphone 13 pro"); 
+		System.out.println("Success");
 	}
 	 
 	@DataProvider
